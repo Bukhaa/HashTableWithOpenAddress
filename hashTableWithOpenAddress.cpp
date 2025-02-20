@@ -186,38 +186,6 @@ bool func(const std::vector<D>& v1, const std::vector<D>& v2) {
 
 int main()
 {
-	setlocale(LC_ALL, "RUS");
-	hashTableWithOpenAddress<int, int> t(10);
-	t.insert({312,10});
-	t.insert({12344,11});
-	t.insert({312,12});
-	t.insert({ 777,13 });
-	t.insert({ 412,14 });
-	std::cout << "Вывод хеш-таблицы на экран: \n";
-	t.printTable();
-	t.find(312);
-	std::cout << "Размер хеш-таблицы: "<< t.sizeOfTable() << std::endl;
-	std::cout << "Количество элементов в таблице: " << t.sizeOfElementsInTable() << std::endl << std::endl;
-	std::cout << "Удалим элемент по ключу:";
-	t.remove(12344);
-	std::cout << '\n';
-	t.printTable();
-	std::cout << "Размер хеш-таблицы: " << t.sizeOfTable() << std::endl;
-	std::cout << "Количество элементов в таблице: " << t.sizeOfElementsInTable() << std::endl << std::endl;
-	std::cout << "Проверим хеш-таблицу на пустоту: ";
-	std::cout << std::boolalpha << t.empty() << std::endl;
-	std::cout << "Отчистим таблицу: " << std::endl;
-	t.clear();
-	std::cout << "Проверим хеш-таблицу на пустоту: ";
-	std::cout << std::boolalpha << t.empty() << std::endl << std::endl;
-	std::cout << "Создадим два массива. Проверим, является ли второй массив подмассивом в первом массиве: ";
-	std::vector<int> v1 {1,2,3,4,5 };
-	std::vector<int> v2 { 1,2,5 };
-	std::cout << std::boolalpha << func(v1, v2) << std::endl;
-	v2.pop_back();
-	std::cout << "Изменим второй массив и проверим снова: ";
-	std::cout << std::boolalpha << func(v1, v2) << std::endl;
-
 	return 0;
 }
 
